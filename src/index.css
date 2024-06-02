@@ -20,6 +20,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.error {
+  color: red;
+}
 
 header {
   padding: 1rem;
@@ -142,7 +145,7 @@ section {
 
 .contact-details {
   
-  form {
+  .form-wrapper {
     gap: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -152,7 +155,7 @@ section {
       grid-column: span 1;
     }
 
-    input[name="phone"], input[type="submit"] {
+    input[name="mobile"], input[type="submit"] {
       grid-column: span 2;
     }
 
@@ -164,6 +167,36 @@ section {
     }
   }
 
+}
+
+.modal-info {
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 255, 255, .5);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  
+  p {
+    max-width: 60%;
+  }
+
+  button {
+    all: unset;
+    width: 50%;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 578px) {
@@ -183,7 +216,7 @@ section {
   }
 
   .contact-details {
-    form {
+    .form-wrapper {
       input {
         grid-column: span 2;
       }
