@@ -12,7 +12,8 @@ const ModalConfirm = () => {
         <div className='modal-info' style={{ display: modal.displayModal ? 'flex':'none'}}>
             <h1>Reservation completed !</h1>
             <p>
-                Deserunt id ipsum consectetur minim ex dolor deserunt commodo excepteur adipisicing commodo. Eiusmod ex fugiat laboris nisi eiusmod. Nostrud non est fugiat laborum occaecat.
+                Reservation process is completed succesfully !
+                We are waiting for you
             </p>
 
             <button onClick={closeModal}>Ok</button>
