@@ -165,3 +165,32 @@ section {
   }
 
 }
+
+@media screen and (max-width: 578px) {
+
+  header {
+    grid-template-columns: repeat(1, 1fr);
+
+    ul {
+      justify-content: center;
+    }
+  }
+
+  .choose-booking-date {
+    grid-template-areas: "title-booking-date"
+                         "datepicker"
+                         "timepicker";
+  }
+
+  .contact-details {
+    form {
+      input {
+        grid-column: span 2;
+      }
+      
+      input[name="firstname"] {
+        grid-column: span 2;
+      }
+    }
+  }
+}
